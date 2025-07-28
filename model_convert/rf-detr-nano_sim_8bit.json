@@ -1,0 +1,37 @@
+{
+ "model_type": "ONNX",          // モデルフォーマット(ONNX/QuantAxModel/QuantONNX)
+ "npu_mode": "NPU3",            // NPUモード(AX620Eの場合はNPU1/NPU2)
+ "target_hardware": "AX650",   // ターゲットハードウェア(AX650/AX620E/M76H)
+ "input": "rf-detr-nano_sim.onnx",  // 入力モデルのファイルパス
+ "output_dir": "rf-detr-nano_sim",      // コンパイル結果の出力ディレクトリ
+ "output_name": "rf-detr-nano_sim.axmodel",  // 出力モデルのファイル名
+ "quant": {
+   "input_configs": [
+     {
+       "tensor_name": "input", // モデルの入力テンソル名
+       "calibration_dataset": "./dataset/calib_image.tar.gz", // キャリブデータ
+       "calibration_size": 10,  // キャリブレーションに使用するデータ数
+       "calibration_mean": [0, 0, 0],  // 正規化の平均値
+       "calibration_std": [255.0, 255.0, 255.0]  // 正規化の標準偏差
+     }
+   ],
+    "calibration_method": "MinMax",
+    "precision_analysis": true,
+    "precision_analysis_method": "EndToEnd",
+#	"conv_bias_data_type": "FP32",
+#    "enable_smooth_quant": true,
+#	"disable_auto_refine_scale": true,
+ },
+ "input_processors": [
+   {
+     "tensor_name": "input",   // 処理対象の入力テンソル名
+     "tensor_format": "BGR",    // モデルの入力テンソル形式
+     "src_format": "BGR",       // 実行時の入力形式
+     "src_dtype": "U8",         // 実行時の入力データ型
+     "src_layout": "NHWC"       // 実行時の入力レイアウト
+   }
+ ],
+ "compiler": {
+   "check": 0                   // コンパイラチェックレベル(0-3)
+ }
+}
