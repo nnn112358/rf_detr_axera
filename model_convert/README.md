@@ -1,5 +1,5 @@
 ```
-root@Thinkpad-T14:/data# pulsar2 build --config rf-detr-nano_sim.json
+root@pulsar2:/data# pulsar2 build --config rf-detr-nano_sim.json
 +--------------------+----------------------------+
 |     Model Name     |         OnnxModel          |
 +--------------------+----------------------------+
