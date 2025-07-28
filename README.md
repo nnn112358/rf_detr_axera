@@ -1,5 +1,5 @@
-# RF-DETR ONNX Export and Inference
-RF-DETR (Real-time DEtection TRansformer) Nanoモデルの ONNX 変換・推論ツール
+# RF-DETR ONNX/AXERA
+RF-DETR (Real-time DEtection TRansformer) Nanoモデルの ONNX 変換・AXERA変換・推論ツール
 
 <img width="1250" height="833" alt="image" src="https://github.com/user-attachments/assets/0911d0d6-f921-478f-8802-0a4ead0f84fd" />
 *画像提供: <a href="https://www.pakutaso.com/20240245033post-50463.html">ぱくたそのフリー素材</a>*
@@ -10,8 +10,6 @@ RF-DETR (Real-time DEtection TRansformer) Nanoモデルの ONNX 変換・推論�
 - ONNX モデルを使用した高速推論
 - COCO データセットクラスに対応した物体検出
 - 検出結果の可視化機能
-
-
 
 
 ## Installation
