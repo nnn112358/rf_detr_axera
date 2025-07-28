@@ -1,9 +1,8 @@
 # RF-DETR ONNX Export and Inference
+RF-DETR (Real-time DEtection TRansformer) Nanoモデルの ONNX 変換・推論ツール
 
 <img width="1250" height="833" alt="image" src="https://github.com/user-attachments/assets/0911d0d6-f921-478f-8802-0a4ead0f84fd" />
-こちらの画像は[ぱくたそのフリー素材](https://www.pakutaso.com/20240245033post-50463.html)を使用しています。
-
-RF-DETR (Real-time DEtection TRansformer) Nanoモデルの ONNX 変換・推論ツール
+*画像提供: <a href="https://www.pakutaso.com/20240245033post-50463.html">ぱくたそのフリー素材</a>*
 
 ## Features
 
